@@ -118,7 +118,112 @@
     {{-- jobs posting --}}
     <section role="jobs-posting" class="w-full">
         <div class="max-w-[1300px] min-w-[1000px] mx-auto p-5 relative overflow-hidden">
+            <div class="bg-[#4640DE] h-full w-full flex lg:flex-row flex-col p-14 overflow-hidden px-20">
+                <div class="w-1/3">
+                    <h2 class="text-h text-5xl font-semibold">Start posting jobs today</h2>
+                    <p class="text-h font-medium my-7">Start posting jobs for only $10</p>
+                    <button class="bg-white px-5 py-3 text-lg font-bold">Signup for free</button>
+                </div>
+                <div class="w-2/3 relative">
+                    <img src="{{ asset('assets/images/dasboard-back.png') }}" alt="dashboard-back-image" class="h-120 absolute right-0 w-140">
+                </div>
+            </div>
         </div>
     </section>
     {{-- jobs posting --}}
+
+    {{--featured jobs--}}
+    <section role="featured-jobs" class="w-full">
+        <div class="max-w-[1300px] min-w-[1000px] mx-auto p-5 relative overflow-hidden">
+            <div class="flex justify-between items-center">
+                <h2 class="text-5xl font-bold capitalize">featured <span style="color: #26a4ff !important;">jobs</span></h2>
+                <a href="" class="capitalize font-medium text-base group">
+                    show all jobs<i class="ri-arrow-right-line ms-2 group-hover:ms-3 transition-all duration-300 ease-in-out"></i>
+                </a>
+            </div>
+            <div class="grid lg:grid-cols-4 grid-cols-1 gap-8 mt-8">
+                <a href="" class="border p-7 border-gray-300 cursor-pointer">
+                    <div class="flex items-center justify-between">
+                        <img src="{{ asset('assets/images/company-logo.svg') }}" alt="company-name" class="mix-blend-multiply h-10">
+                        <button class="border px-3 py-1.5 capitalize" role="jobs-type">full time</button>
+                    </div>
+                    <h2 class="capitalize text-lg text-b font-medium mt-3">frontend development</h2>
+                    <p class="capitalize text-base text-b opacity-50 items-center">renoult<i class="ri-focus-fill text-b mx-2 text-xs"></i>madrid, spain</p>
+                    <p class="capitalize text-base text-b opacity-50 items-center my-4 truncate">renoult islooking for a frontend developer to help team</p>
+                    <span class="inline-flex items-center rounded-xs mt-4.5 bg-gray-100 px-2.5 py-1 text-md font-medium text-gray-600 inset-ring inset-ring-gray-500/10">Technology</span>
+                </a>
+                <a href="" class="border p-7 border-gray-300 cursor-pointer">
+                    <div class="flex items-center justify-between">
+                        <img src="{{ asset('assets/images/company-logo.svg') }}" alt="company-name" class="mix-blend-multiply h-10">
+                        <button class="border px-3 py-1.5 capitalize" role="jobs-type">full time</button>
+                    </div>
+                    <h2 class="capitalize text-lg text-b font-medium mt-3">frontend development</h2>
+                    <p class="capitalize text-base text-b opacity-50 items-center">renoult<i class="ri-focus-fill text-b mx-2 text-xs"></i>madrid, spain</p>
+                    <p class="capitalize text-base text-b opacity-50 items-center my-4 truncate">renoult islooking for a frontend developer to help team</p>
+                    <span class="inline-flex items-center rounded-xs mt-4.5 bg-gray-100 px-2.5 py-1 text-md font-medium text-orange-600 text-l inset-ring inset-ring-orange-500/10">Technology</span>
+                </a>
+                <a href="" class="border p-7 border-gray-300 cursor-pointer">
+                    <div class="flex items-center justify-between">
+                        <img src="{{ asset('assets/images/company-logo.svg') }}" alt="company-name" class="mix-blend-multiply h-10">
+                        <button class="border px-3 py-1.5 capitalize" role="jobs-type">full time</button>
+                    </div>
+                    <h2 class="capitalize text-lg text-b font-medium mt-3">frontend development</h2>
+                    <p class="capitalize text-base text-b opacity-50 items-center">renoult<i class="ri-focus-fill text-b mx-2 text-xs"></i>madrid, spain</p>
+                    <p class="capitalize text-base text-b opacity-50 items-center my-4 truncate">renoult islooking for a frontend developer to help team</p>
+                    <span class="inline-flex items-center text-g rounded-xs mt-4.5 bg-gray-100 px-2.5 py-1 text-md font-medium text-green-600 inset-ring inset-ring-green-500/10">Technology</span>
+                </a>
+                <a href="" class="border p-7 border-gray-300 cursor-pointer">
+                    <div class="flex items-center justify-between">
+                        <img src="{{ asset('assets/images/company-logo.svg') }}" alt="company-name" class="mix-blend-multiply h-10">
+                        <button class="border px-3 py-1.5 capitalize" role="jobs-type">full time</button>
+                    </div>
+                    <h2 class="capitalize text-lg text-b font-medium mt-3">frontend development</h2>
+                    <p class="capitalize text-base text-b opacity-50 items-center">renoult<i class="ri-focus-fill text-b mx-2 text-xs"></i>madrid, spain</p>
+                    <p class="capitalize text-base text-b opacity-50 items-center my-4 truncate">renoult islooking for a frontend developer to help team</p>
+                    <span class="inline-flex items-center rounded-xs mt-4.5 bg-gray-100 px-2.5 py-1 text-md font-medium text-gray-600 inset-ring inset-ring-gray-500/10">Technology</span>
+                </a>
+                <a href="" class="border p-7 border-gray-300 cursor-pointer">
+                    <div class="flex items-center justify-between">
+                        <img src="{{ asset('assets/images/company-logo.svg') }}" alt="company-name" class="mix-blend-multiply h-10">
+                        <button class="border px-3 py-1.5 capitalize" role="jobs-type">full time</button>
+                    </div>
+                    <h2 class="capitalize text-lg text-b font-medium mt-3">frontend development</h2>
+                    <p class="capitalize text-base text-b opacity-50 items-center">renoult<i class="ri-focus-fill text-b mx-2 text-xs"></i>madrid, spain</p>
+                    <p class="capitalize text-base text-b opacity-50 items-center my-4 truncate">renoult islooking for a frontend developer to help team</p>
+                    <span class="inline-flex text-bl items-center rounded-xs mt-4.5 bg-gray-100 px-2.5 py-1 text-md font-medium text-blue-600 inset-ring inset-ring-blue-500/10">Technology</span>
+                </a>
+                <a href="" class="border p-7 border-gray-300 cursor-pointer">
+                    <div class="flex items-center justify-between">
+                        <img src="{{ asset('assets/images/company-logo.svg') }}" alt="company-name" class="mix-blend-multiply h-10">
+                        <button class="border px-3 py-1.5 capitalize" role="jobs-type">full time</button>
+                    </div>
+                    <h2 class="capitalize text-lg text-b font-medium mt-3">frontend development</h2>
+                    <p class="capitalize text-base text-b opacity-50 items-center">renoult<i class="ri-focus-fill text-b mx-2 text-xs"></i>madrid, spain</p>
+                    <p class="capitalize text-base text-b opacity-50 items-center my-4 truncate">renoult islooking for a frontend developer to help team</p>
+                    <span class="inline-flex items-center rounded-xs mt-4.5 bg-gray-100 px-2.5 py-1 text-md font-medium text-gray-600 inset-ring inset-ring-gray-500/10">Technology</span>
+                </a>
+                <a href="" class="border p-7 border-gray-300 cursor-pointer">
+                    <div class="flex items-center justify-between">
+                        <img src="{{ asset('assets/images/company-logo.svg') }}" alt="company-name" class="mix-blend-multiply h-10">
+                        <button class="border px-3 py-1.5 capitalize" role="jobs-type">full time</button>
+                    </div>
+                    <h2 class="capitalize text-lg text-b font-medium mt-3">frontend development</h2>
+                    <p class="capitalize text-base text-b opacity-50 items-center">renoult<i class="ri-focus-fill text-b mx-2 text-xs"></i>madrid, spain</p>
+                    <p class="capitalize text-base text-b opacity-50 items-center my-4 truncate">renoult islooking for a frontend developer to help team</p>
+                    <span class="inline-flex items-center rounded-xs mt-4.5 bg-gray-100 px-2.5 py-1 text-md font-medium text-gray-600 inset-ring inset-ring-gray-500/10">Technology</span>
+                </a>
+                <a href="" class="border p-7 border-gray-300 cursor-pointer">
+                    <div class="flex items-center justify-between">
+                        <img src="{{ asset('assets/images/company-logo.svg') }}" alt="company-name" class="mix-blend-multiply h-10">
+                        <button class="border px-3 py-1.5 capitalize" role="jobs-type">full time</button>
+                    </div>
+                    <h2 class="capitalize text-lg text-b font-medium mt-3">frontend development</h2>
+                    <p class="capitalize text-base text-b opacity-50 items-center">renoult<i class="ri-focus-fill text-b mx-2 text-xs"></i>madrid, spain</p>
+                    <p class="capitalize text-base text-b opacity-50 items-center my-4 truncate">renoult islooking for a frontend developer to help team</p>
+                    <span class="inline-flex items-center rounded-xs mt-4.5 bg-gray-100 px-2.5 py-1 text-md font-medium text-gray-600 inset-ring inset-ring-gray-500/10">Technology</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    {{--featured jobs--}}
 </x-BaseComponent>

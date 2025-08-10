@@ -18,3 +18,15 @@ body{
 .text-h{
     color: #ffffff !important;
 }
+
+.text-l{
+    color: orange !important;
+}
+
+.text-g{
+    color: green !important;
+}
+
+.text-bl{
+    color: blue !important;
+}
