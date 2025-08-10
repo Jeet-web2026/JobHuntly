@@ -30,7 +30,7 @@
     {{--main section--}}
 
     {{--company trust section--}}
-    <section class="w-full" role="company-hiring-section">
+    <section class="w-full py-10" role="company-hiring-section">
         <div class="max-w-[1300px] min-w-[1000px] mx-auto p-5 relative overflow-hidden">
             <div class="flex justify-between items-center">
                 <p class="capitalize text-lg font-medium">companies we helped grow</p>
@@ -116,7 +116,7 @@
     {{--explore by category--}}
 
     {{-- jobs posting --}}
-    <section role="jobs-posting" class="w-full">
+    <section role="jobs-posting" class="w-full py-10">
         <div class="max-w-[1300px] min-w-[1000px] mx-auto p-5 relative overflow-hidden">
             <div class="bg-[#4640DE] h-full w-full flex lg:flex-row flex-col p-14 overflow-hidden px-20">
                 <div class="w-1/3">
@@ -226,4 +226,109 @@
         </div>
     </section>
     {{--featured jobs--}}
+
+    {{--latest jobs--}}
+    <section role="latest-jobs" class="w-full py-10">
+        <div class="max-w-[1300px] min-w-[1000px] mx-auto p-5 relative overflow-hidden">
+            <div class="flex justify-between items-center">
+                <h2 class="text-5xl font-bold capitalize">latest <span style="color: #26a4ff !important;">jobs open</span></h2>
+                <a href="" class="capitalize font-medium text-base group">
+                    show all jobs<i class="ri-arrow-right-line ms-2 group-hover:ms-3 transition-all duration-300 ease-in-out"></i>
+                </a>
+            </div>
+            <div class="grid lg:grid-cols-2 grid-cols-1 mt-8 gap-8">
+                <a href="" class="bg-white p-5 flex flex-row items-start">
+                    <div class="w-1/5 flex items-center justify-center">
+                        <img src="{{ asset('assets/images/company-logo-2.svg') }}" alt="company-logo" class="h-20 rounded-full p-2 mix-blend-multiply">
+                    </div>
+                    <div class="w-4/5">
+                        <h4 class="capitalize font-semibold text-b text-2xl mb-1">frontend developer</h4>
+                        <p class="capitalize text-base text-b opacity-50 items-center">nomad<i class="ri-focus-fill text-b mx-2 text-xs"></i>madrid, spain</p>
+                        <div class="flex flex-row items-center justify-start mt-4.5 gap-3">
+                            <span class="inline-flex capitalize items-center rounded-xs bg-green-100 px-2.5 py-1 text-md font-medium text-g text-green-600 inset-ring inset-ring-green-500/10">full time</span>
+                            <span class="text-3xl">|</span>
+                            <span class="inline-flex capitalize items-center rounded-xs bg-orange-100 px-2.5 py-1 text-md font-medium text-l text-orange-600 inset-ring inset-ring-orange-500/10">engineering</span>
+                            <span class="inline-flex capitalize items-center rounded-xs bg-blue-100 px-2.5 py-1 text-md font-medium text-bl text-blue-600 inset-ring inset-ring-blue-500/10">full stack</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="" class="bg-white p-5 flex flex-row items-start">
+                    <div class="w-1/5 flex items-center justify-center">
+                        <img src="{{ asset('assets/images/company-logo-2.svg') }}" alt="company-logo" class="h-20 rounded-full p-2 mix-blend-multiply">
+                    </div>
+                    <div class="w-4/5">
+                        <h4 class="capitalize font-semibold text-b text-2xl mb-1">frontend developer</h4>
+                        <p class="capitalize text-base text-b opacity-50 items-center">nomad<i class="ri-focus-fill text-b mx-2 text-xs"></i>madrid, spain</p>
+                        <div class="flex flex-row items-center justify-start mt-4.5 gap-3">
+                            <span class="inline-flex capitalize items-center rounded-xs bg-green-100 px-2.5 py-1 text-md font-medium text-g text-green-600 inset-ring inset-ring-green-500/10">full time</span>
+                            <span class="text-3xl">|</span>
+                            <span class="inline-flex capitalize items-center rounded-xs bg-orange-100 px-2.5 py-1 text-md font-medium text-l text-orange-600 inset-ring inset-ring-orange-500/10">engineering</span>
+                            <span class="inline-flex capitalize items-center rounded-xs bg-blue-100 px-2.5 py-1 text-md font-medium text-bl text-blue-600 inset-ring inset-ring-blue-500/10">full stack</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="" class="bg-white p-5 flex flex-row items-start">
+                    <div class="w-1/5 flex items-center justify-center">
+                        <img src="{{ asset('assets/images/company-logo-2.svg') }}" alt="company-logo" class="h-20 rounded-full p-2 mix-blend-multiply">
+                    </div>
+                    <div class="w-4/5">
+                        <h4 class="capitalize font-semibold text-b text-2xl mb-1">frontend developer</h4>
+                        <p class="capitalize text-base text-b opacity-50 items-center">nomad<i class="ri-focus-fill text-b mx-2 text-xs"></i>madrid, spain</p>
+                        <div class="flex flex-row items-center justify-start mt-4.5 gap-3">
+                            <span class="inline-flex capitalize items-center rounded-xs bg-green-100 px-2.5 py-1 text-md font-medium text-g text-green-600 inset-ring inset-ring-green-500/10">full time</span>
+                            <span class="text-3xl">|</span>
+                            <span class="inline-flex capitalize items-center rounded-xs bg-orange-100 px-2.5 py-1 text-md font-medium text-l text-orange-600 inset-ring inset-ring-orange-500/10">engineering</span>
+                            <span class="inline-flex capitalize items-center rounded-xs bg-blue-100 px-2.5 py-1 text-md font-medium text-bl text-blue-600 inset-ring inset-ring-blue-500/10">full stack</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="" class="bg-white p-5 flex flex-row items-start">
+                    <div class="w-1/5 flex items-center justify-center">
+                        <img src="{{ asset('assets/images/company-logo-2.svg') }}" alt="company-logo" class="h-20 rounded-full p-2 mix-blend-multiply">
+                    </div>
+                    <div class="w-4/5">
+                        <h4 class="capitalize font-semibold text-b text-2xl mb-1">frontend developer</h4>
+                        <p class="capitalize text-base text-b opacity-50 items-center">nomad<i class="ri-focus-fill text-b mx-2 text-xs"></i>madrid, spain</p>
+                        <div class="flex flex-row items-center justify-start mt-4.5 gap-3">
+                            <span class="inline-flex capitalize items-center rounded-xs bg-green-100 px-2.5 py-1 text-md font-medium text-g text-green-600 inset-ring inset-ring-green-500/10">full time</span>
+                            <span class="text-3xl">|</span>
+                            <span class="inline-flex capitalize items-center rounded-xs bg-orange-100 px-2.5 py-1 text-md font-medium text-l text-orange-600 inset-ring inset-ring-orange-500/10">engineering</span>
+                            <span class="inline-flex capitalize items-center rounded-xs bg-blue-100 px-2.5 py-1 text-md font-medium text-bl text-blue-600 inset-ring inset-ring-blue-500/10">full stack</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="" class="bg-white p-5 flex flex-row items-start">
+                    <div class="w-1/5 flex items-center justify-center">
+                        <img src="{{ asset('assets/images/company-logo-2.svg') }}" alt="company-logo" class="h-20 rounded-full p-2 mix-blend-multiply">
+                    </div>
+                    <div class="w-4/5">
+                        <h4 class="capitalize font-semibold text-b text-2xl mb-1">frontend developer</h4>
+                        <p class="capitalize text-base text-b opacity-50 items-center">nomad<i class="ri-focus-fill text-b mx-2 text-xs"></i>madrid, spain</p>
+                        <div class="flex flex-row items-center justify-start mt-4.5 gap-3">
+                            <span class="inline-flex capitalize items-center rounded-xs bg-green-100 px-2.5 py-1 text-md font-medium text-g text-green-600 inset-ring inset-ring-green-500/10">full time</span>
+                            <span class="text-3xl">|</span>
+                            <span class="inline-flex capitalize items-center rounded-xs bg-orange-100 px-2.5 py-1 text-md font-medium text-l text-orange-600 inset-ring inset-ring-orange-500/10">engineering</span>
+                            <span class="inline-flex capitalize items-center rounded-xs bg-blue-100 px-2.5 py-1 text-md font-medium text-bl text-blue-600 inset-ring inset-ring-blue-500/10">full stack</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="" class="bg-white p-5 flex flex-row items-start">
+                    <div class="w-1/5 flex items-center justify-center">
+                        <img src="{{ asset('assets/images/company-logo-2.svg') }}" alt="company-logo" class="h-20 rounded-full p-2 mix-blend-multiply">
+                    </div>
+                    <div class="w-4/5">
+                        <h4 class="capitalize font-semibold text-b text-2xl mb-1">frontend developer</h4>
+                        <p class="capitalize text-base text-b opacity-50 items-center">nomad<i class="ri-focus-fill text-b mx-2 text-xs"></i>madrid, spain</p>
+                        <div class="flex flex-row items-center justify-start mt-4.5 gap-3">
+                            <span class="inline-flex capitalize items-center rounded-xs bg-green-100 px-2.5 py-1 text-md font-medium text-g text-green-600 inset-ring inset-ring-green-500/10">full time</span>
+                            <span class="text-3xl">|</span>
+                            <span class="inline-flex capitalize items-center rounded-xs bg-orange-100 px-2.5 py-1 text-md font-medium text-l text-orange-600 inset-ring inset-ring-orange-500/10">engineering</span>
+                            <span class="inline-flex capitalize items-center rounded-xs bg-blue-100 px-2.5 py-1 text-md font-medium text-bl text-blue-600 inset-ring inset-ring-blue-500/10">full stack</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    {{--latest jobs--}}
 </x-BaseComponent>
