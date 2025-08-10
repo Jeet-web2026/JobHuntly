@@ -3,3 +3,6 @@
     font-optical-sizing: auto;
     color: #2a277c;
 }
+::placeholder {
+    color: #a1a1aa;
+}
