@@ -1,4 +1,5 @@
 <x-BaseComponent jquery="true">
+    {{--main section--}}
     <main class="w-full">
         <div class="max-w-[1300px] min-w-[1000px] mx-auto p-5 flex justify-center items-center min-h-screen relative overflow-hidden">
             <div class="w-1/2 relative">
@@ -26,4 +27,16 @@
             </div>
         </div>
     </main>
+    {{--main section--}}
+
+    {{--company trust section--}}
+    <section class="w-full" role="company-hiring-section">
+        <div class="max-w-[1300px] min-w-[1000px] mx-auto p-5 relative overflow-hidden">
+            <div class="flex justify-between items-center">
+                <p class="capitalize text-lg font-medium">companies we helped grow</p>
+                <a href="" class="capitalize text-base font-medium group">see all companies<i class="ri-arrow-right-line ms-2 group-hover:ms-3 duration-300 transition-all"></i></a>
+            </div>
+        </div>
+    </section>
+    {{--company trust section--}}
 </x-BaseComponent>
