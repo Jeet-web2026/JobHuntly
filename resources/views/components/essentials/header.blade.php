@@ -1,4 +1,4 @@
-<header class="fixed top-0 left-0 w-full bg-transparent py-5">
+<header class="fixed top-0 left-0 w-full bg-transparent py-5 z-50">
     <div class="max-w-[1300px] min-w-[1000px] mx-auto flex justify-between items-center px-5 py-2">
         <div class="w-1/2 flex items-center space-x-10">
             <a href="{{  url('/') }}" class="flex items-center">

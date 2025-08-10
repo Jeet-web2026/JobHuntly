@@ -1,4 +1,4 @@
-@props(['title' => '', 'metadescription' => '', 'remixicon' => ''])
+@props(['title' => '', 'metadescription' => '', 'remixicon' => '', 'jquery' => ''])
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -38,6 +38,12 @@
     @include('components.essentials.header')
     {{ $slot }}
     @include('components.essentials.footer')
+    @if($jquery)
+    {{-- jquery cdn --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    {{-- base js --}}
+    <script src="{{ asset('assets/js/base.js') }}"></script>
+    @endif
 </body>
 
 </html>
