@@ -144,7 +144,7 @@
             <div class="grid lg:grid-cols-4 grid-cols-1 gap-8 mt-8">
                 <a href="" class="border p-7 border-gray-300 cursor-pointer">
                     <div class="flex items-center justify-between">
-                        <img src="{{ asset('assets/images/company-logo.svg') }}" alt="company-name" class="mix-blend-multiply h-10">
+                        <img src="{{ asset('assets/images/company-logo.svg') }}" alt="company-name" class="mix-blend-multiply h-10 rounded-full">
                         <button class="border px-3 py-1.5 capitalize" role="jobs-type">full time</button>
                     </div>
                     <h2 class="capitalize text-lg text-b font-medium mt-3">frontend development</h2>
@@ -154,7 +154,7 @@
                 </a>
                 <a href="" class="border p-7 border-gray-300 cursor-pointer">
                     <div class="flex items-center justify-between">
-                        <img src="{{ asset('assets/images/company-logo.svg') }}" alt="company-name" class="mix-blend-multiply h-10">
+                        <img src="{{ asset('assets/images/company-logo.svg') }}" alt="company-name" class="mix-blend-multiply h-10 rounded-full">
                         <button class="border px-3 py-1.5 capitalize" role="jobs-type">full time</button>
                     </div>
                     <h2 class="capitalize text-lg text-b font-medium mt-3">frontend development</h2>
@@ -164,7 +164,7 @@
                 </a>
                 <a href="" class="border p-7 border-gray-300 cursor-pointer">
                     <div class="flex items-center justify-between">
-                        <img src="{{ asset('assets/images/company-logo.svg') }}" alt="company-name" class="mix-blend-multiply h-10">
+                        <img src="{{ asset('assets/images/company-logo.svg') }}" alt="company-name" class="mix-blend-multiply h-10 rounded-full">
                         <button class="border px-3 py-1.5 capitalize" role="jobs-type">full time</button>
                     </div>
                     <h2 class="capitalize text-lg text-b font-medium mt-3">frontend development</h2>
@@ -174,7 +174,7 @@
                 </a>
                 <a href="" class="border p-7 border-gray-300 cursor-pointer">
                     <div class="flex items-center justify-between">
-                        <img src="{{ asset('assets/images/company-logo.svg') }}" alt="company-name" class="mix-blend-multiply h-10">
+                        <img src="{{ asset('assets/images/company-logo.svg') }}" alt="company-name" class="mix-blend-multiply h-10 rounded-full">
                         <button class="border px-3 py-1.5 capitalize" role="jobs-type">full time</button>
                     </div>
                     <h2 class="capitalize text-lg text-b font-medium mt-3">frontend development</h2>
@@ -184,7 +184,7 @@
                 </a>
                 <a href="" class="border p-7 border-gray-300 cursor-pointer">
                     <div class="flex items-center justify-between">
-                        <img src="{{ asset('assets/images/company-logo.svg') }}" alt="company-name" class="mix-blend-multiply h-10">
+                        <img src="{{ asset('assets/images/company-logo.svg') }}" alt="company-name" class="mix-blend-multiply h-10 rounded-full">
                         <button class="border px-3 py-1.5 capitalize" role="jobs-type">full time</button>
                     </div>
                     <h2 class="capitalize text-lg text-b font-medium mt-3">frontend development</h2>
@@ -194,7 +194,7 @@
                 </a>
                 <a href="" class="border p-7 border-gray-300 cursor-pointer">
                     <div class="flex items-center justify-between">
-                        <img src="{{ asset('assets/images/company-logo.svg') }}" alt="company-name" class="mix-blend-multiply h-10">
+                        <img src="{{ asset('assets/images/company-logo.svg') }}" alt="company-name" class="mix-blend-multiply h-10 rounded-full">
                         <button class="border px-3 py-1.5 capitalize" role="jobs-type">full time</button>
                     </div>
                     <h2 class="capitalize text-lg text-b font-medium mt-3">frontend development</h2>
@@ -204,7 +204,7 @@
                 </a>
                 <a href="" class="border p-7 border-gray-300 cursor-pointer">
                     <div class="flex items-center justify-between">
-                        <img src="{{ asset('assets/images/company-logo.svg') }}" alt="company-name" class="mix-blend-multiply h-10">
+                        <img src="{{ asset('assets/images/company-logo.svg') }}" alt="company-name" class="mix-blend-multiply h-10 rounded-full">
                         <button class="border px-3 py-1.5 capitalize" role="jobs-type">full time</button>
                     </div>
                     <h2 class="capitalize text-lg text-b font-medium mt-3">frontend development</h2>
@@ -214,7 +214,7 @@
                 </a>
                 <a href="" class="border p-7 border-gray-300 cursor-pointer">
                     <div class="flex items-center justify-between">
-                        <img src="{{ asset('assets/images/company-logo.svg') }}" alt="company-name" class="mix-blend-multiply h-10">
+                        <img src="{{ asset('assets/images/company-logo.svg') }}" alt="company-name" class="mix-blend-multiply h-10 rounded-full">
                         <button class="border px-3 py-1.5 capitalize" role="jobs-type">full time</button>
                     </div>
                     <h2 class="capitalize text-lg text-b font-medium mt-3">frontend development</h2>
