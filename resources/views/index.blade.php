@@ -38,22 +38,22 @@
             </div>
             <div class="mt-5 companies-hire">
                 <div class="p-5 text-center">
-                    <p class="capitalize text-2xl items-center justify-start flex"><i class="ri-github-fill me-3 text-3xl"></i>github</p>
+                    <p class="capitalize text-2xl items-center justify-start flex font-semibold"><i class="ri-github-fill me-3 text-3xl"></i>github</p>
                 </div>
                 <div class="p-5 text-center">
-                    <p class="capitalize text-2xl items-center justify-start flex"><i class="ri-google-line text-4xl me-3"></i>google</p>
+                    <p class="capitalize text-2xl items-center justify-start flex font-semibold"><i class="ri-google-line text-4xl me-3"></i>google</p>
                 </div>
                 <div class="p-5 text-center">
-                    <p class="capitalize text-2xl items-center justify-start flex"><i class="ri-microsoft-line text-4xl me-3"></i>microsoft</p>
+                    <p class="capitalize text-2xl items-center justify-start flex font-semibold"><i class="ri-microsoft-line text-4xl me-3"></i>microsoft</p>
                 </div>
                 <div class="p-5 text-center">
-                    <p class="capitalize text-2xl items-center justify-start flex"><i class="ri-meta-line text-4xl me-3"></i>meta</p>
+                    <p class="capitalize text-2xl items-center justify-start flex font-semibold"><i class="ri-meta-line text-4xl me-3"></i>meta</p>
                 </div>
                 <div class="p-5 text-center">
-                    <p class="capitalize text-2xl items-center justify-start flex"><i class="ri-amazon-fill text-4xl me-3"></i>amazon</p>
+                    <p class="capitalize text-2xl items-center justify-start flex font-semibold"><i class="ri-amazon-fill text-4xl me-3"></i>amazon</p>
                 </div>
                 <div class="p-5 text-center">
-                    <p class="capitalize text-2xl items-center justify-start flex"><i class="ri-apple-line text-4xl me-3"></i>apple</p>
+                    <p class="capitalize text-2xl items-center justify-start flex font-semibold"><i class="ri-apple-line text-4xl me-3"></i>apple</p>
                 </div>
             </div>
         </div>
@@ -107,7 +107,7 @@
                 </div>
                 <div class="border card-category p-8 border-gray-300 hover:bg-[#4640de] transition-all duration-300 ease-in-out cursor-pointer">
                     <i class="ri-color-filter-ai-line text-4xl font-medium"></i>
-                    <h3 class="text-2xl font-semibold capitalize text-b mt-5 mb-4">human resourse</h3>
+                    <h3 class="text-2xl font-semibold capitalize text-b mt-5 mb-4">human resourses</h3>
                     <a href="" class="text-xl text-b opacity-75 group">190 jobs available<i class="ri-arrow-right-line ms-1 group-hover:ms-2 text-b duration-300 transition-all"></i></a>
                 </div>
             </div>
@@ -116,6 +116,9 @@
     {{--explore by category--}}
 
     {{-- jobs posting --}}
-    <section></section>
+    <section role="jobs-posting" class="w-full">
+        <div class="max-w-[1300px] min-w-[1000px] mx-auto p-5 relative overflow-hidden">
+        </div>
+    </section>
     {{-- jobs posting --}}
 </x-BaseComponent>
