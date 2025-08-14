@@ -25,7 +25,7 @@
             <a href="" class="text-lg font-bold border-r-2 pe-5">
                 Login
             </a>
-            <a href="">
+            <a href="{{ route('user.register') }}">
                 <button class="bg-[#4640DE] capitalize px-4 py-2 text-lg hover:bg-[#1f1c5b] transition-all duration-300 cursor-pointer" style="color: #ffffff !important;">
                     signup
                 </button>

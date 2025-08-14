@@ -1,0 +1,3 @@
+<x-BaseComponent>
+    
+</x-BaseComponent>
