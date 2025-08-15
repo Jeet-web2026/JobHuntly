@@ -1,3 +1,4 @@
+@props(['maintitle' => '', 'mainmetadescription' => '', 'mainremixicon' => '', 'mainjquery' => '', 'mainslick' => ''])
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -6,11 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="CSRF_TOKEN" content="{{  csrf_token() }}">
     <meta name="description" content="Find the best jobs and opportunities for developers at {{ config('app.name') }}.">
-    @yield('meta-section')
+    @if($mainmetadescription)
+    <meta name="description" content="{{ $mainmetadescription }}">
+    @endif
+    <meta name="description" content="{{ $maintitle ? $maintitle : 'Best Jobs Platform for Developers' }}">
     <meta name="keywords" content="jobs, developers, opportunities, {{ config('app.name') }}">
     <meta name="author" content="{{ config('app.name') }}">
     <link rel="icon" href="{{ asset('assets/images/logo_.png') }}" type="image/png">
-    @yield('title-section')
+    <title>
+        @if($maintitle)
+        {{ $maintitle }} | {{ config('app.name') }}
+        @else
+        {{ config('app.name') }} | Best Jobs Platform for Developers
+        @endif
+    </title>
     {{-- tailwind css cdn --}}
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     {{--figtree font--}}
@@ -21,4 +31,24 @@
     <link rel="stylesheet" href="{{ asset('assets/css/base.css') }}">
     {{-- Remixicon cdn --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    {{ $slot }}
+    {{--slick css--}}
+    @if($mainslick)
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    @endif
+</head>
+
+<body>
+    {{ $maincontent }}
+    @if($mainjquery)
+    {{-- jquery cdn --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    {{-- base js --}}
+    <script src="{{ asset('assets/js/base.js') }}"></script>
+    @endif
+    @if($mainslick)
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    @endif
+</body>
+
+</html>
