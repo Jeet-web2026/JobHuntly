@@ -35,7 +35,7 @@
                 </ul>
             </div>
             @else
-            <a href="" class="text-lg font-bold border-r-2 pe-5">
+            <a href="{{ route('user.login') }}" class="text-lg font-bold border-r-2 pe-5">
                 Login
             </a>
             <a href="{{ route('user.register') }}">
