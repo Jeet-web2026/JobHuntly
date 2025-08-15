@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Laravel\Socialite\Facades\Socialite;
 
 class AuthController extends Controller
@@ -30,12 +31,20 @@ class AuthController extends Controller
             ]
         );
         if ($success) {
-            return response()->json([
-                'status' => 200,
-                'message' => 'User Authenticaton Successfull!'
-            ]);
+            auth()->login($success);
+            return redirect()->route('home')->with('success', 'Loggedin Successfully!');
         } else {
             return back()->with('error', 'Something went wrong, try after some times!');
         }
+    }
+
+    public function authLogout()
+    {
+        $user = User::find(Auth::user()->id);
+        $user->email_verified_at = null;
+        $user->save();
+
+        Auth::guard('web')->logout();
+        return back()->with('success', 'Logout Successfully!');
     }
 }

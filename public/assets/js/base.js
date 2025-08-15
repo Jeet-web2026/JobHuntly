@@ -4,6 +4,7 @@ $(document).ready(function () {
             $("header")
                 .removeClass("bg-transparent")
                 .addClass("bg-white shadow-lg");
+            $(".authenticated-menu").hide();
         } else {
             $("header")
                 .removeClass("bg-white shadow-lg")
@@ -61,4 +62,11 @@ $(document).ready(function () {
             $(this).find("i, h3, a").removeClass("text-h");
         }
     );
+    $(".authenticated-menu").hide();
+    $(".authenticated-btn").on("click", function () {
+        $(".authenticated-menu").fadeIn();
+    });
+    $('main').click(function () {
+        $(".authenticated-menu").hide();
+    });
 });
