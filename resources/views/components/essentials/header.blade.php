@@ -29,7 +29,7 @@
             </a>
             <div class="absolute authenticated-menu py-3 px-3.5 bg-white -bottom-25 right-12 shadow-md rounded-xl rounded-tr-none">
                 <ul>
-                    <a href=""><li class="capitalize font-medium text-base mb-1">dashboard</li></a>
+                    <a href="{{ route('user.dashboard') }}"><li class="capitalize font-medium text-base mb-1">dashboard</li></a>
                     <a href=""><li class="capitalize font-medium text-base mb-1">profile setting</li></a>
                     <a href="{{ route('auth.logout') }}"><li class="capitalize font-medium text-base">logout</li></a>
                 </ul>
