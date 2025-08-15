@@ -17,26 +17,36 @@ class AuthController extends Controller
     public function providerAuthentication($provider)
     {
         $userDetails = Socialite::driver($provider)->user();
-        $success = User::updateOrCreate(
-            [
-                'email' => $userDetails->email,
-            ],
-            [
+
+        $existingUser = User::where('email', $userDetails->email)->first();
+
+        if ($existingUser) {
+            $authentication = $existingUser->update([
+                'google_id'         => $userDetails->id,
+                'google_profile'    => $userDetails->avatar,
+                'email_verified_at' => now(),
+            ]);
+
+            if($authentication){
+                auth()->login($existingUser);
+                return redirect()->route('home')->with('success', 'Loggedin Successfully!');
+            }
+        } else {
+            $success = User::create([
+                'email'             => $userDetails->email,
                 'nick_name'         => $userDetails->nickname ?? null,
                 'name'              => $userDetails->name,
                 'google_id'         => $userDetails->id,
                 'google_profile'    => $userDetails->avatar,
                 'email_verified_at' => now(),
-                'password'          => rand(111111, 999999)
-            ]
-        );
-        if ($success) {
-            auth()->login($success);
-            return redirect()->route('home')->with('success', 'Loggedin Successfully!');
-        } else {
-            return back()->with('error', 'Something went wrong, try after some times!');
+                'password'          => rand(111111, 999999),
+            ]);
+            if ($success) {
+                return redirect()->route('user.login')->with('success', 'Now you can login!');
+            }
         }
     }
+
 
     public function authLogout()
     {

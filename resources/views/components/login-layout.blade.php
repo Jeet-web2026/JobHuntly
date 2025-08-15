@@ -3,13 +3,25 @@
     <x-slot:maincontent>
         <main class="d-flex justify-content-center align-items-center vh-100 p-5">
             <div class="card border-0 p-4 shadow-sm" style="width: 45%;">
+                @if(session('success'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <p class="mb-0 text-success fw-semibold h6">{{ session('success') }}</p>
+                    <button type="button" class="btn-close shadow-none" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                @endif
+                @if (session('error'))
+                <div class="alert alert-danger text-danger alert-dismissible fade show" role="alert">
+                    <p class="mb-0 text-success fw-semibold h6">{{ session('error') }}</p>
+                    <button type="button" class="btn-close shadow-none" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                @endif
                 <h2 class="text-uppercase fw-bold h4 mb-4 text-primary text-center border p-2">{{ $logindes }}</h2>
+                @if(request()->is('*user-login'))
                 <div class="d-flex justify-content-center align-items-center">
                     <a href="{{ route('auth.provider', 'google') }}" class="fs-4 text-decoration-none"><i class="ri-google-fill text-danger"></i></a>
                     <span class="mx-3 text-black">|</span>
                     <a href="{{ route('auth.provider', 'github') }}" class="fs-4 text-decoration-none"><i class="ri-github-fill text-dark"></i></a>
                 </div>
-                @if(request()->is('*user-login'))
                 <form class="mt-2">
                     <div class="mb-3">
                         <label for="user_email" class="form-label">Email address</label>
@@ -24,16 +36,16 @@
                         <label class="form-check-label" for="exampleCheck1">Remember me</label>
                     </div>
                     <div class="d-flex align-items-center gap-2 mt-3">
-                        <a href="{{ route('home') }}" class="btn btn-outline-secondary px-3 py-1 rounded-1"><i class="ri-home-9-line text-black"></i></a>
+                        <a href="{{ route('home') }}" class="btn btn-outline-secondary px-3 py-1 fs-5 rounded-1"><i class="ri-home-9-line text-black"></i></a>
                         <button type="submit" class="btn btn-primary px-4 py-2 rounded-1 w-100">Submit</button>
                     </div>
                 </form>
-                @if (session('error'))
-                <div class="alert alert-danger">
-                    {{ session('error') }}
-                </div>
-                @endif
                 @else
+                <div class="d-flex justify-content-center align-items-center">
+                    <a href="{{ route('auth.provider', 'google') }}" class="fs-4 text-decoration-none"><i class="ri-google-fill text-danger"></i></a>
+                    <span class="mx-3 text-black">|</span>
+                    <a href="{{ route('auth.provider', 'github') }}" class="fs-4 text-decoration-none"><i class="ri-github-fill text-dark"></i></a>
+                </div>
                 <form class="mt-2">
                     <div class="row mb-2">
                         <div class="col-md-6">
@@ -58,9 +70,10 @@
                         <label class="form-check-label" for="exampleCheck1">Remember me</label>
                     </div>
                     <div class="d-flex align-items-center gap-2 mt-3">
-                        <a href="{{ route('home') }}" class="btn btn-outline-secondary px-3 py-1 rounded-1"><i class="ri-home-9-line text-black"></i></a>
+                        <a href="{{ route('home') }}" class="btn btn-outline-secondary px-3 py-1 fs-5 rounded-1"><i class="ri-home-9-line text-black"></i></a>
                         <button type="submit" class="btn btn-primary px-4 py-2 rounded-1 w-100">Submit</button>
                     </div>
+                    <p class="mt-3 mb-0 text-center fw-semibold text-black">Already have an account? <a href="{{ route('user.login') }}">Signin here</a></p>
                 </form>
                 @endif
 
