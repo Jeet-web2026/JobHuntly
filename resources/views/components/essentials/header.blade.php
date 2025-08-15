@@ -24,7 +24,7 @@
             </a>
             @auth
             <a href="javascript:void(0)" class="text-lg authenticated-btn font-bold flex items-center gap-2 hover:shadow-md shadow-xs transition-all duration-300 border px-2 py-1 rounded-full border-gray-300">
-                <img src="{{ Auth::user()->google_profile }}" alt="{{ Auth::user()->name }}" class="rounded-full" style="height: 30px;">
+                <p class="bg-[#26a4ff] text-base px-3 py-1 rounded-full" style="color: #fff !important;">{{ Auth::user()->name[0] }}</p>
                 <span class="capitalize text-base font-medium">{{ Auth::user()->name }}</span>
             </a>
             <div class="absolute authenticated-menu py-3 px-3.5 bg-white -bottom-25 right-12 shadow-md rounded-xl rounded-tr-none">

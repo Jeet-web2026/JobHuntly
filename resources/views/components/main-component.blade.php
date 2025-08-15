@@ -31,6 +31,7 @@
     @else
     {{-- tailwind css cdn --}}
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
     @endif
     {{--figtree font--}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
