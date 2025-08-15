@@ -66,7 +66,20 @@ $(document).ready(function () {
     $(".authenticated-btn").on("click", function () {
         $(".authenticated-menu").fadeIn();
     });
-    $('main').click(function () {
+    $("main").click(function () {
         $(".authenticated-menu").hide();
     });
+
+    if (window.sessionMessage && window.sessionMessage.type) {
+        Swal.fire({
+            icon: window.sessionMessage.type,
+            title:
+                window.sessionMessage.type === "success"
+                    ? "Success!"
+                    : "Error!",
+            text: window.sessionMessage.text,
+            timer: 3000,
+            showConfirmButton: false,
+        });
+    }
 });

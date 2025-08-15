@@ -1,4 +1,4 @@
-<x-BaseComponent jquery="true" slick="true">
+<x-BaseComponent jquery="true" slick="true" sweetalert="true">
     {{--main section--}}
     <main class="w-full" role="main-section">
         <div class="max-w-[1300px] min-w-[1000px] mx-auto p-5 flex justify-center items-center min-h-screen relative overflow-hidden">

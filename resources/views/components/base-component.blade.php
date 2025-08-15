@@ -1,5 +1,5 @@
-@props(['title' => '', 'metadescription' => '', 'remixicon' => '', 'jquery' => '', 'slick' => '', 'daisyUi' => '', 'bootstrap' => ''])
-<x-MainComponent maintitle="{{ $title }}" mainmetadescription="{{ $metadescription }}" mainremixicon="{{ $remixicon }}" mainjquery="{{ $jquery }}" mainslick="{{ $slick }}" maindaisyui="{{ $daisyUi }}" mainbootstrap="{{ $bootstrap }}">
+@props(['title' => '', 'metadescription' => '', 'remixicon' => '', 'jquery' => '', 'slick' => '', 'daisyUi' => '', 'bootstrap' => '', 'sweetalert' => ''])
+<x-MainComponent maintitle="{{ $title }}" mainmetadescription="{{ $metadescription }}" mainremixicon="{{ $remixicon }}" mainjquery="{{ $jquery }}" mainslick="{{ $slick }}" maindaisyui="{{ $daisyUi }}" mainbootstrap="{{ $bootstrap }}" mainsweetalert="{{ $sweetalert }}">
     <x-slot:maincontent>
         @include('components.essentials.header')
         {{ $slot }}
