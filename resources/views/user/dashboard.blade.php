@@ -9,6 +9,11 @@
                         </div>
                         <h3 class="text-center capitalize mt-2 font-semibold text-b text-lg">{{ Auth::user('web')->name }}</h3>
                     </div>
+                    <nav role="navigation" class="flex justify-center items-center mt-8">
+                        <ul>
+                            <li class="capitalize text-b font-medium text-base">dashboard</li>
+                        </ul>
+                    </nav>
                     <div class="flex justify-center items-center">
                         <button command="show-modal" commandfor="dialog" class="absolute bottom-3 text-base font-medium items-center cursor-pointer" style="color: #000 !important;"><i class="ri-shut-down-line me-2" style="color: #000 !important;"></i>Logout</button>
                         <x-DialogBox link="{{ route('auth.logout') }}">
