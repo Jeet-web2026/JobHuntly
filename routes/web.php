@@ -22,5 +22,11 @@ Route::controller(AuthController::class)->group(function () {
 Route::middleware('auth:web')->group(function () {
     Route::controller(UserController::class)->group(function () {
         Route::get('user-dashboard', 'index')->name('user.dashboard');
+        Route::get('user-performance', 'performance')->name('user.performance');
+        Route::get('user-opportunities', 'opportunities')->name('user.opportunities');
+        Route::get('user-help', 'help')->name('user.help');
+        Route::get('user-settings', 'settings')->name('user.settings');
+        Route::get('user-feedback', 'feedback')->name('user.feedback');
+        Route::get('user-about', 'about')->name('user.about');
     });
 });
