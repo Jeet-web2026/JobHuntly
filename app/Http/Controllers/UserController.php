@@ -10,4 +10,28 @@ class UserController extends Controller
     {
         return view('user.dashboard');
     }
+    public function performance()
+    {
+        return view('user.performance');
+    }
+    public function opportunities()
+    {
+        return view('user.opportunities');
+    }
+    public function help()
+    {
+        return view('user.help');
+    }
+    public function settings()
+    {
+        return view('user.settings');
+    }
+    public function feedback()
+    {
+        return view('user.feedback');
+    }
+    public function about()
+    {
+        return view('user.about');
+    }
 }
