@@ -6,7 +6,9 @@
                     <x-DashboardNav />
                 </div>
                 <div class="lg:w-5/6 h-full w-full">
-
+                    <figure class="highcharts-figure">
+                        <div id="container"></div>
+                    </figure>
                 </div>
             </div>
         </main>

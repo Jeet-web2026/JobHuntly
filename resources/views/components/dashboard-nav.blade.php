@@ -1,6 +1,6 @@
 <div role="user-description">
     <div class="flex justify-center items-center">
-        <img src="{{ Auth::user('web')->google_profile }}" alt="{{ Auth::user('web')->name }}" class="rounded-full h-14">
+        <p class="bg-black text-4xl px-5.5 py-2.5 rounded-full text-h">{{ Auth::user()->name[0] }}</p>
     </div>
     <h3 class="text-center capitalize mt-2 font-semibold text-b text-lg">{{ Auth::user('web')->name }}</h3>
 </div>
