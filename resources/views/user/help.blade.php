@@ -1,4 +1,4 @@
-<x-MainComponent maintitle="{{ Auth::user('web')->name }} | help">
+<x-MainComponent maintitle="{{ Auth::user('web')->name }} | Help">
     <x-slot:maincontent>
         <main class="h-screen w-full bg-gray-150">
             <div class="flex lg:flex-row md:flex-row flex-col w-full h-full">
