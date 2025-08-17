@@ -22,7 +22,14 @@ Route::controller(AuthController::class)->group(function () {
 Route::middleware('auth:web')->group(function () {
     Route::controller(UserController::class)->group(function () {
         Route::get('user-dashboard', 'index')->name('user.dashboard');
+
         Route::get('user-performance', 'performance')->name('user.performance');
+        Route::prefix('user-performance')->group(function () {
+            Route::get('search-appearance', 'searchapearance')->name('user.searchapearance');
+            Route::get('recruter-actions', 'recruteractions')->name('user.recruteractions');
+            Route::get('edit-profile', 'editprofile')->name('user.editprofile');
+        });
+
         Route::get('user-opportunities', 'opportunities')->name('user.opportunities');
         Route::get('user-help', 'help')->name('user.help');
         Route::get('user-settings', 'settings')->name('user.settings');

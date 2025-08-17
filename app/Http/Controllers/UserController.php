@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use App\Models\UserDetails;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -12,7 +15,8 @@ class UserController extends Controller
     }
     public function performance()
     {
-        return view('user.performance');
+        $userData = User::with('details')->first();
+        return view('user.performance', compact('userData'));
     }
     public function opportunities()
     {
