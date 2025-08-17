@@ -14,11 +14,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="bg-gray-950/25 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                <div class="bg-white px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                     @if($link)
                     <a href="{{ $link }}" command="close" commandfor="dialog" class="inline-flex w-full justify-center rounded-md bg-red-500 px-3 py-2 text-sm font-semibold text-white cursor-pointer hover:bg-red-400 sm:ml-3 sm:w-auto" style="color: #ffffff !important;">Logout</a>
                     @endif
-                    <button type="button" command="close" commandfor="dialog" class="mt-3 inline-flex w-full justify-center rounded-md bg-white/10 px-3 py-2 text-sm font-semibold text-white cursor-pointer inset-ring inset-ring-white/5 hover:bg-white/20 sm:mt-0 sm:w-auto" style="color: #ffffff !important;">Cancel</button>
+                    <button type="button" command="close" commandfor="dialog" class="mt-3 inline-flex w-full justify-center rounded-md bg-gray-400 px-3 py-2 text-sm font-semibold text-white cursor-pointer inset-ring inset-ring-white/5 hover:bg-gray-500 sm:mt-0 sm:w-auto" style="color: #ffffff !important;">Cancel</button>
                 </div>
             </el-dialog-panel>
         </div>
