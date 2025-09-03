@@ -28,6 +28,8 @@ Route::middleware('auth:web')->group(function () {
             Route::get('search-appearance', 'searchapearance')->name('user.searchapearance');
             Route::get('recruter-actions', 'recruteractions')->name('user.recruteractions');
             Route::get('edit-profile', 'editprofile')->name('user.editprofile');
+            Route::get('edit-professional-details', 'editeProfessionalDetails')->name('user.editprofessional-details');
+            Route::post('edit-profile-save', 'editprofileSave')->name('user.user-details-save');
         });
 
         Route::get('user-opportunities', 'opportunities')->name('user.opportunities');

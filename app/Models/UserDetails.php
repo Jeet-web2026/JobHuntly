@@ -17,13 +17,9 @@ class UserDetails extends Model
         'last_qualification',
         'last_qualification_organisation',
         'current_city',
-        'birth_date'
+        'birth_date',
+        'user_id'
     ];
-
-    public function setBirthDateAttribute($value)
-    {
-        $this->attributes['birth_date'] = Carbon::createFromDate('d-m-Y', $value)->format('Y-m-d');
-    }
 
     public function getFullNameAttribute()
     {
