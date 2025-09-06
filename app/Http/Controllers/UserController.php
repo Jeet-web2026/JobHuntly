@@ -41,7 +41,8 @@ class UserController extends Controller
 
     public function editprofile()
     {
-        return view('user.edit-profile');
+        $currentUserData = UserDetails::where('user_id', Auth::id())->first();
+        return view('user.edit-profile', compact('currentUserData'));
     }
 
     public function editprofileSave(Request $request)
@@ -91,7 +92,6 @@ class UserController extends Controller
         ]);
 
         if ($dataSave) {
-            session(['userId' => $dataSave->user_id]);
             return redirect()->route('user.editprofessional-details')
                 ->with('success', 'Personal details saved successfully!');
         } else {
@@ -102,6 +102,12 @@ class UserController extends Controller
 
     public function editeProfessionalDetails()
     {
-        return view('user.edit-professional-details');
+        $currentUserData = UserDetails::where('user_id', Auth::id())->first();
+        if(!empty($currentUserData)){
+           return view('user.edit-professional-details', compact('currentUserData')); 
+        }else{
+            return redirect()->route('user.editprofile')
+            ->with('error', 'Please fill the Personal details first.');
+        }
     }
 }
