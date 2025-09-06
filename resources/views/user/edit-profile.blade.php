@@ -1,7 +1,7 @@
 <x-MainComponent maintitle="{{ Auth::user('web')->name }} | Edit Profile" mainbootstrap="true">
     <x-slot:maincontent>
         <main class="p-5 d-flex justify-content-center align-items-center vh-100">
-            <div class="card w-75 shadow p-4">
+            <div class="card w-75 shadow-sm p-4 border-0">
                 <div class="card-body">
                     <h2 class="text-center text-b mb-5 mt-2 text-uppercase fw-semibold fs-3 border py-3 rounded">Personal Information</h2>
                     <form method="POST" action="{{ route('user.user-details-save') }}">
