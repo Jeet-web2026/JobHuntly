@@ -36,60 +36,83 @@
                             @enderror
                         </div>
                         <div class="position-relative">
-                            <button type="button" class="btn btn-dark py-2 shadow-none position-absolute top-0 end-0 add-more-employment"><i class="ri-add-line me-1 text-light "></i>Add more</button>
+                            <button type="button" class="btn btn-dark py-2 shadow-none position-absolute top-0 end-0 add-more-employment">
+                                <i class="ri-add-line me-1 text-light"></i>Add more
+                            </button>
                             <h4 class="h5 text-b my-5">2. Employment status<i class="ri-arrow-right-double-line ms-1 text-b"></i></h4>
                             <div class="designation-area">
+                                @php
+                                $designations = old('designation', ['']);
+                                $dateFroms = old('date-from', ['']);
+                                $dateTos = old('date-to', ['']);
+                                $roles = old('roles-responsibilities', ['']);
+                                $workingStatus = old('working-status', []);
+                                @endphp
+
+                                @foreach($designations as $i => $designation)
                                 <div class="designation-field position-relative">
                                     <div class="d-flex justify-content-end">
-                                        <button type="button" class="btn btn-dark me-2 close-employement d-none"><i class="ri-delete-bin-line text-light me-1"></i>Remove</button>
-                                        <button type="button" class="btn btn-dark py-2 shadow-none add-more-employment d-none"><i class="ri-add-line me-1 text-light "></i>Add more</button>
+                                        <button type="button" class="btn btn-dark me-2 close-employement {{ $loop->first ? 'd-none' : '' }}">
+                                            <i class="ri-delete-bin-line text-light me-1"></i>Remove
+                                        </button>
+                                        <button type="button" class="btn btn-dark py-2 shadow-none add-more-employment {{ $loop->first ? 'd-none' : '' }}">
+                                            <i class="ri-add-line me-1 text-light"></i>Add more
+                                        </button>
                                     </div>
+
                                     <div class="mb-3">
-                                        <label for="designation" class="form-label h6 text-capitalize text-b">designation</label>
-                                        <textarea id="designation" name="designation[]" class="form-control shadow-none" placeholder="Write your designation here" style="height: 50px">{{ old('designation') }}</textarea>
-                                        @error('designation.*')
+                                        <label for="designation-{{ $i }}" class="form-label h6 text-capitalize text-b">designation</label>
+                                        <textarea id="designation-{{ $i }}" name="designation[]" class="form-control shadow-none" placeholder="Write your designation here" style="height: 50px">{{ $designation }}</textarea>
+                                        @error("designation.$i")
                                         <span class="text-danger">{{ $message }}</span>
                                         @enderror
                                     </div>
+
                                     <div class="mb-3 row">
                                         <div class="col-md-6 mb-3">
-                                            <label for="date-from" class="form-label h6 text-capitalize text-b">from</label>
-                                            <input name="date-from[]" id="date-from" type="date" class="form-control shadow-none" />
-                                            @error('date-from.*')
+                                            <label for="date-from-{{ $i }}" class="form-label h6 text-capitalize text-b">from</label>
+                                            <input name="date-from[]" id="date-from-{{ $i }}" type="date" class="form-control shadow-none" value="{{ $dateFroms[$i] ?? '' }}">
+                                            @error("date-from.$i")
                                             <span class="text-danger">{{ $message }}</span>
                                             @enderror
                                         </div>
+
                                         <div class="col-md-6">
-                                            <label for="date-to" class="form-label h6 text-capitalize text-b">to</label>
-                                            <input type="date" id="date-to" name="date-to[]" class="form-control shadow-none" />
-                                            @error('date-to.*')
+                                            <label for="date-to-{{ $i }}" class="form-label h6 text-capitalize text-b">to</label>
+                                            <input type="date" id="date-to-{{ $i }}" name="date-to[]" class="form-control shadow-none" value="{{ $dateTos[$i] ?? '' }}">
+                                            @error("date-to.$i")
                                             <span class="text-danger">{{ $message }}</span>
                                             @enderror
                                         </div>
+
                                         <div class="col-md-12">
                                             <div class="form-check">
-                                                <input class="form-check-input" style="cursor: pointer !important;" type="checkbox" value="1" id="working-status" name="working-status[]" />
-                                                <label class="form-check-label text-b" style="cursor: pointer !important;" for="working-status">
+                                                <input class="form-check-input" type="checkbox" value="1" id="working-status-{{ $i }}" name="working-status[{{ $i }}]" {{ in_array($i, array_keys($workingStatus)) ? 'checked' : '' }}>
+                                                <label class="form-check-label text-b" for="working-status-{{ $i }}">
                                                     Currently I'm working here
                                                 </label>
-                                                @error('working-status.*')
+                                                @error("working-status.$i")
                                                 <span class="text-danger">{{ $message }}</span>
                                                 @enderror
                                             </div>
                                         </div>
                                     </div>
+
                                     <div class="mb-3">
-                                        <label for="roles-responsibilities" class="form-label h6 text-capitalize text-b">your roles & responsibilities</label>
-                                        <textarea id="roles-responsibilities" name="roles-responsibilities[]" class="form-control shadow-none" placeholder="Write your roles & responsibility here" style="height: 60px">{{ old('roles-responsibilities') }}</textarea>
-                                        @error('roles-responsibilities.*')
+                                        <label for="roles-responsibilities-{{ $i }}" class="form-label h6 text-capitalize text-b">your roles & responsibilities</label>
+                                        <textarea id="roles-responsibilities-{{ $i }}" name="roles-responsibilities[]" class="form-control shadow-none" placeholder="Write your roles & responsibility here" style="height: 60px">{{ $roles[$i] ?? '' }}</textarea>
+                                        @error("roles-responsibilities.$i")
                                         <span class="text-danger">{{ $message }}</span>
                                         @enderror
                                     </div>
                                 </div>
+                                @endforeach
                             </div>
                         </div>
+
                         <button type="submit" class="btn btn-primary shadow-none border-0 px-4 py-2 mt-3">Save and next</button>
                     </form>
+
                 </div>
             </div>
         </main>
