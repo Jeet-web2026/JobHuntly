@@ -9,28 +9,28 @@
                         <h4 class="h5 text-b my-5">1. Career preference<i class="ri-arrow-right-double-line ms-1 text-b"></i></h4>
                         <div class="mb-3">
                             <label for="preffered-job-type" class="form-label h6 text-capitalize text-b">preffered job type</label>
-                            <textarea id="preffered-job-type" name="preffered-job-type" class="form-control shadow-none" placeholder="Your preffered job type here" style="height: 60px">{{ old('preffered-job-type') }}</textarea>
+                            <textarea id="preffered-job-type" name="preffered-job-type" class="form-control shadow-none" placeholder="Your preffered job type here" style="height: 60px">{{ old('preffered-job-type', $currentUserProfessionalData->preffered_job_type ?? '') }}</textarea>
                             @error('preffered-job-type')
                             <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
                         <div class="mb-3">
                             <label for="availibility-to-work" class="form-label h6 text-capitalize text-b">availability to work</label>
-                            <textarea id="availibility-to-work" name="availibility-to-work" class="form-control shadow-none" placeholder="Your work availability here" style="height: 60px">{{ old('availibility-to-work') }}</textarea>
+                            <textarea id="availibility-to-work" name="availibility-to-work" class="form-control shadow-none" placeholder="Your work availability here" style="height: 60px">{{ old('availibility-to-work', $currentUserProfessionalData->availibility_to_work ?? '') }}</textarea>
                             @error('availibility-to-work')
                             <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
                         <div class="mb-3">
                             <label for="preffered-location" class="form-label h6 text-capitalize text-b">preffered location</label>
-                            <textarea id="preffered-location" name="preffered-location" class="form-control shadow-none" placeholder="Your work availability here" style="height: 60px">{{ old('preffered-location') }}</textarea>
+                            <textarea id="preffered-location" name="preffered-location" class="form-control shadow-none" placeholder="Your work availability here" style="height: 60px">{{ old('preffered-location', $currentUserProfessionalData->preffered_location ?? '') }}</textarea>
                             @error('preffered-location')
                             <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
                         <div class="mb-3">
                             <label for="skills" class="form-label h6 text-capitalize text-b">Skills</label>
-                            <textarea id="skills" name="skills" class="form-control shadow-none" placeholder="Your work availability here" style="height: 60px">{{ old('skills') }}</textarea>
+                            <textarea id="skills" name="skills" class="form-control shadow-none" placeholder="Your work availability here" style="height: 60px">{{ old('skills', $currentUserProfessionalData->skills ?? '') }}</textarea>
                             @error('skills')
                             <span class="text-danger">{{ $message }}</span>
                             @enderror
@@ -109,10 +109,8 @@
                                 @endforeach
                             </div>
                         </div>
-
                         <button type="submit" class="btn btn-primary shadow-none border-0 px-4 py-2 mt-3">Save and next</button>
                     </form>
-
                 </div>
             </div>
         </main>

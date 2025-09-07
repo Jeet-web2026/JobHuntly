@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\UserprofessionalrequestRule;
 use App\Models\User;
 use App\Models\UserDetails;
+use App\Models\UserprofessionalDetails;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -105,7 +106,8 @@ class UserController extends Controller
     {
         $currentUserData = UserDetails::where('user_id', Auth::id())->first();
         if (!empty($currentUserData)) {
-            return view('user.edit-professional-details', compact('currentUserData'));
+            $currentUserProfessionalData = UserprofessionalDetails::where('user_id', Auth::id())->first();
+            return view('user.edit-professional-details', compact('currentUserProfessionalData'));
         } else {
             return redirect()->route('user.editprofile')
                 ->with('error', 'Please fill the Personal details first.');
@@ -115,5 +117,34 @@ class UserController extends Controller
     public function saveeProfessionalDetails(UserprofessionalrequestRule $request)
     {
         $requestedData = $request->validated();
+        $result = UserprofessionalDetails::updateOrcreate(
+            [
+                'user_id' => Auth::id(),
+            ],
+            [
+                'user_id' => Auth::id(),
+                'preffered_job_type' => $requestedData['preffered-job-type'],
+                'availibility_to_work' => $requestedData['availibility-to-work'],
+                'preffered_location' => $requestedData['preffered-location'],
+                'skills' => $requestedData['skills'],
+                'designation' => $requestedData['designation'],
+                'date_from' => $requestedData['date-from'],
+                'date_to' => $requestedData['date-to'],
+                'roles_responsibilities' => $requestedData['roles-responsibilities'],
+            ]
+        );
+
+        if ($result) {
+            return redirect()->route('user.projects-details')
+                ->with('success', 'Professional details saved successfully!');
+        } else {
+            return back()->withInput()
+                ->with('error', 'Failed to save professional details. Please try again.');
+        }
+    }
+
+    public function userProjectDetails()
+    {
+        return view('user.projects-details');
     }
 }

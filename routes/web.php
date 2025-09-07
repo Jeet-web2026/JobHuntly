@@ -31,6 +31,7 @@ Route::middleware('auth:web')->group(function () {
             Route::get('edit-professional-details', 'editeProfessionalDetails')->name('user.editprofessional-details');
             Route::post('edit-profile-save', 'editprofileSave')->name('user.user-details-save');
             Route::post('save-professional-details', 'saveeProfessionalDetails')->name('user.saveprofessional-details');
+            Route::get('project-details', 'userProjectDetails')->name('user.projects-details');
         });
 
         Route::get('user-opportunities', 'opportunities')->name('user.opportunities');
