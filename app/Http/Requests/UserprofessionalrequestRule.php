@@ -18,13 +18,13 @@ class UserprofessionalrequestRule extends FormRequest
             'availibility-to-work' => 'required',
             'preffered-location' => 'required',
             'skills' => 'required',
-            'designation .*' => 'required',
+            'designation.*' => 'required',
             'designation' => 'array|required|min:1',
-            'date-from .*' => 'date|required',
+            'date-from.*' => 'date|required',
             'date-from' => 'array|required|min:1',
-            'date-to .*' => 'date|required|after_or_equal:date-from.*',
+            'date-to.*' => 'date|required|after_or_equal:date-from.*',
             'date-to' => 'array|required|min:1',
-            'roles-responsibilities .*' => 'required',
+            'roles-responsibilities.*' => 'required',
             'roles-responsibilities' => 'array|required|min:1',
         ];
     }
