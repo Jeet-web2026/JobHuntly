@@ -42,10 +42,10 @@
                             <h4 class="h5 text-b my-5">2. Employment status<i class="ri-arrow-right-double-line ms-1 text-b"></i></h4>
                             <div class="designation-area">
                                 @php
-                                $designations = old('designation', ['']);
-                                $dateFroms = old('date-from', ['']);
-                                $dateTos = old('date-to', ['']);
-                                $roles = old('roles-responsibilities', ['']);
+                                $designations = old('designation', $currentUserProfessionalData->designation ?? ['']);
+                                $dateFroms = old('date-from', $currentUserProfessionalData->date_from ?? ['']);
+                                $dateTos = old('date-to', $currentUserProfessionalData->date_to ?? ['']);
+                                $roles = old('roles-responsibilities', $currentUserProfessionalData->roles_responsibilities ?? ['']);
                                 $workingStatus = old('working-status', []);
                                 @endphp
 
