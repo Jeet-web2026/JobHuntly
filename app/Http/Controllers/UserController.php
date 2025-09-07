@@ -3,51 +3,55 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\UserprofessionalrequestRule;
+use App\Http\Requests\UserprojectDetailsRule;
 use App\Models\User;
 use App\Models\UserDetails;
 use App\Models\UserprofessionalDetails;
+use App\Models\UserprojectsDetails;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\View\View;
 
 class UserController extends Controller
 {
-    public function index()
+    public function index(): view
     {
         return view('user.dashboard');
     }
-    public function performance()
+    public function performance(): view
     {
         $userData = User::with('details')->first();
         return view('user.performance', compact('userData'));
     }
-    public function opportunities()
+    public function opportunities(): view
     {
         return view('user.opportunities');
     }
-    public function help()
+    public function help(): view
     {
         return view('user.help');
     }
-    public function settings()
+    public function settings(): view
     {
         return view('user.settings');
     }
-    public function feedback()
+    public function feedback(): view
     {
         return view('user.feedback');
     }
-    public function about()
+    public function about(): view
     {
         return view('user.about');
     }
 
-    public function editprofile()
+    public function editprofile(): view
     {
         $currentUserData = UserDetails::where('user_id', Auth::id())->first();
         return view('user.edit-profile', compact('currentUserData'));
     }
 
-    public function editprofileSave(Request $request)
+    public function editprofileSave(Request $request): RedirectResponse
     {
         $requestedData = $request->validate([
             'full-name' => 'string|required|min:3|max:100',
@@ -81,7 +85,9 @@ class UserController extends Controller
         $first_name = $nameparts[0];
         $last_name = isset($nameparts[1]) ? $nameparts[1] : '';
 
-        $dataSave = UserDetails::create([
+        $dataSave = UserDetails::updateOrcreate([
+            'user_id' => Auth::id(),
+        ], [
             'first_name' => $first_name,
             'last_name' => $last_name,
             'email' => $requestedData['email-address'],
@@ -102,7 +108,7 @@ class UserController extends Controller
         }
     }
 
-    public function editeProfessionalDetails()
+    public function editeProfessionalDetails(): RedirectResponse|view
     {
         $currentUserData = UserDetails::where('user_id', Auth::id())->first();
         if (!empty($currentUserData)) {
@@ -114,7 +120,7 @@ class UserController extends Controller
         }
     }
 
-    public function saveeProfessionalDetails(UserprofessionalrequestRule $request)
+    public function saveeProfessionalDetails(UserprofessionalrequestRule $request): RedirectResponse
     {
         $requestedData = $request->validated();
         $result = UserprofessionalDetails::updateOrcreate(
@@ -143,8 +149,31 @@ class UserController extends Controller
         }
     }
 
-    public function userProjectDetails()
+    public function userProjectDetails(): View
     {
         return view('user.projects-details');
+    }
+
+    public function userProjectDetailsSave(UserprojectDetailsRule $request): RedirectResponse
+    {
+        $requestedData = $request->validated();
+        $result = UserprojectsDetails::updateOrcreate([
+            'user_id' => Auth::id(),
+        ], [
+            'user_id' => Auth::id(),
+            'project_name' => $requestedData['projects-name'],
+            'project_url' => $requestedData['projects-url'],
+            'start_date' => $requestedData['start-date'],
+            'end_date' => $requestedData['end-date'],
+            'project_details' => $requestedData['description'],
+            'is_currently_working' => $requestedData['project-status'] ?? null,
+        ]);
+
+        if ($result) {
+            return back()->with('success', 'Projects added successfully!');
+        } else {
+            return back()->withInput()
+                ->with('error', 'Failed to add projects. Please try again.');
+        }
     }
 }
